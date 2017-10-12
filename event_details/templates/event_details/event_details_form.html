@@ -3,9 +3,20 @@
 <title>Event details form</title>
 </head>
 <body>
-<form>
+	<form action="{% url 'event_details_form' %}" method="POST"> {% csrf_token %}
+		<h3><label for="category">Event category: </label></h3>
+		<input type="text" size="60" name="category">
+		
+		<h3><label for="event_name">Event name: </label></h3>
+		<input type="text" size="60" name="event_name">
 
+		<h3><label for="description">Event description: </label></h3>
+		<input type="text" size="200" name="description">
 
-</form>
+		<h3><label for="charges">Event charges: </label></h3>
+		<input type="text" size="60" name="charges">
+
+		<input type="submit" value="SUBMIT">
+	</form>
 </body>
 </html>
