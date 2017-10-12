@@ -6,10 +6,10 @@ from event_details.forms import Event_details_form
 
 # Create your views here.
 def index(request):
-	return render_to_response('event_details/events.html', {'content': "Its working"})
+	return render_to_response('event_details/events.html', {'content': Event_details.objects.all()})
 
 def event_details(request):
-	if request.method is 'POST' or 'GET':
+	if request.method == 'POST':
 		form = Event_details_form(request.POST)
 		if form.is_valid():
 			event_category = request.POST.get('category')
