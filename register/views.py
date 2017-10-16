@@ -25,3 +25,6 @@ def index(request):
 	return render(request, 'register/register.html', {
 		'form': form,
 		})
+
+def login(request):
+	return render(request, "register/login.html")

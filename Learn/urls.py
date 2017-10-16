@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from home import views as home
 from django.contrib import admin
+from register import views as register
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -24,4 +25,5 @@ urlpatterns = [
     url(r'^events/', include('event_details.urls')),
     url(r'^review/', include('review.urls')),
     url(r'^register/', include('register.urls')),
+    url(r'^login/', register.login),
 ]

@@ -1,24 +1,63 @@
 {% load static %}
+<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="{%static 'register/graphics/style.css' %}">
+	<title>Podcasts</title>
+	<link rel="stylesheet" type="text/css" href="{%static 'register/graphics/application.css' %}">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic' rel='stylesheet' type='text/css'>
 </head>
+	<body>
+		<header id="main_header" class="cf">
+			<div class="wrapper_wide">
+				<a href="index.html" id="logo">Event Hive</a>
+				<nav>
+					<ul>
+						<li><a href="home.html">Home</a><li>
+						<li><a href="events.html">Events</a></li>
+						<li><a href="review.html">Review</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="register.html">Register</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
 
-<body>
-<div class="container">
-<h2>Register</h2>
-<h3>Are you an event organizer and would like to advertise your event with us? Fill the form below and we will get back to you</h3>
+		<div id="banner" class="sign_up_banner">
+			<h1>Create an Event</h1>
+		</div>
 
-	<form action="{% url 'index' %}" method="POST"> {% csrf_token %}
-		<h3><label for="name">Name: </label></h3>
-		<input type="text" size="60" name="name">
-		<h3><label for="email">Email: </label></h3>
-		<input type="text" size="60" name="email">
-		<h3><label for="phone">Phone: </label></h3>
-		<input type="text" size="60" name="phone">
-		<br>
-		<input type="submit" value="REGISTER">
-	</form>
-</div>
-</body>
+		<div id="form">
+			<div class="wrapper_skinny">
+				<form >
+
+					<div class="field">
+						<label>Name</label><br>
+						<input type="text"/>
+					</div>
+
+					<div class="field">
+						<label>Email</label><br>
+						<input type="email"/>
+					</div>
+
+					<div class="field">
+						<label>Phone Number</label><br>
+						<input type="email"/>
+					</div>
+
+					<div class="field">
+						<label>Pasword</label><br>
+						<input type="password"/>
+					</div>
+
+					
+					<div class="actions">
+						<input type="submit" class="button button_highlight button_block">
+					</div>	
+
+				</form>
+			</div>
+		</div>
+		
+	</body>
 </html>
