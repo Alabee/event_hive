@@ -7,6 +7,9 @@ class Event_details(models.Model):
 	event_description = models.CharField(max_length = 1000)
 	event_charges = models.CharField(max_length = 255)
 
+	def __str__(self):
+		return self.event_name + '-' + self.event_description
+
 '''
 , choices=EVENT_CATEGORIES
 

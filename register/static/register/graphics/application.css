@@ -96,7 +96,7 @@
   background-image: url("images/sign-in-banner.jpg"); }
 
 .sign_up_banner {
-  background-image: url("/images/sign-up-banner.jpg"); }
+  background-image: url("images/sign-up-banner.jpg"); }
 
 .pagination:after, .pagination:before {
   content: " ";
