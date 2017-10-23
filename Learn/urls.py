@@ -25,5 +25,5 @@ urlpatterns = [
     url(r'^events/', include('event_details.urls')),
     url(r'^review/', include('review.urls')),
     url(r'^register/', include('register.urls')),
-    url(r'^login/', register.login),
+    url(r'^login/', register.login, name ='login'),
 ]

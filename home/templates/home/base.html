@@ -1,6 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
 <html>
 <head>
-<title><h2>Home</h2></title>
-{% block content %}
-{% endblock %}
+	<title>Podcasts</title>
+	<link rel="stylesheet" type="text/css"href="{%static 'home/graphics/application.css' %}">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic' rel='stylesheet' type='text/css'>
+</head>
+	<body>
+		<header id="main_header" class="cf">
+			<div class="wrapper_wide">
+				<a href="index.html" id="logo">EventHive</a>
+				<nav>
+					<ul>
+						<li><a href="events.html">Explore</a></li>
+						<li><a href="sign-in.html">Sign In</a></li>
+						<li><a href="sign-up.html">Create an Event</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div id="banner" class="sign_in_banner">
+			<h1>Welcome</h1>
+		</div>
+
+		<div id="form">
+			<div class="wrapper_skinny">
+			<h1>Test </h1>
+				{% block content %}
+				{% endblock %}
+			</div>
+		</div>
+		
+	</body>
 </html>

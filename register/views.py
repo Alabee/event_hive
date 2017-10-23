@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template import loader
 
 from register.models import User_details
-from register.forms import User_details_form
+from register.forms import User_details_form, Login_form
 
 # Create your views here.
 def index(request):
@@ -27,4 +27,12 @@ def index(request):
 		})
 
 def login(request):
+	if request.method == 'POST':
+		form = Login_form(request.POST)
+		if form.is_valid():
+			user_name = request.POST.get('user_name')
+			password = request.POST.get('password')
+
+			user = authenticate
+
 	return render(request, "register/login.html")
