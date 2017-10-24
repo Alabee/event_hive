@@ -27,9 +27,11 @@
 		<div id="form">
 			<div class="wrapper_skinny">
 				<form action="{% url 'event_details_form' %}" method="POST"> {% csrf_token %}
+					<div class="field">
 					<h3><label for="category">Event category: </label></h3>
 					<input type="text" size="60" name="category">
-					
+					</div>
+
 					<h3><label for="event_name">Event name: </label></h3>
 					<input type="text" size="60" name="event_name">
 
@@ -39,6 +41,11 @@
 					<h3><label for="charges">Event charges: </label></h3>
 					<input type="text" size="60" name="charges">
 
+					<div class="field">
+					<h3><label for="date">Event date: </label></h3>
+					<input type="date" size="60" name="date">
+					</div>
+					
 					<div class="actions">
 						<input type="submit" class="button button_highlight button_block" value= "SUBMIT">
 					</div>	

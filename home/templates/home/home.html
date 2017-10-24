@@ -1,4 +1,9 @@
 {% extends "home/base.html" %}
 {% block content %}
-{{ content }}
+	{% for i in content %}
+	<h2>Event category: {{i.event_category}}</h2>
+	<h2>Event name: {{i.event_name}}</h2>
+	<h2>Event description: {{i.event_description}}</h2>
+	<h2>Event charges: {{i.event_charges}}</h2>
+	{% endfor %}
 {% endblock %}

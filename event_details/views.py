@@ -12,12 +12,13 @@ def event_details(request):
 	if request.method == 'POST':
 		form = Event_details_form(request.POST)
 		if form.is_valid():
-			event_category = request.POST.get('category')
-			event_name= request.POST.get('event_name')
-			event_description= request.POST.get('description')
-			event_charges= request.POST.get('charges')
+			event_category = request.POST.get('category','')
+			event_name= request.POST.get('event_name','')
+			event_description= request.POST.get('description','')
+			event_charges= request.POST.get('charges','')
+			event_date = request.POST.get('date','')
 
-			event_details = Event_details(event_category = event_category, event_name = event_name, event_description = event_description, event_charges = event_charges)
+			event_details = Event_details(event_category = event_category, event_name = event_name, event_description = event_description, event_charges = event_charges, event_date = date)
 			event_details.save()
 
 			return HttpResponse("<h2>Success</h2>")
