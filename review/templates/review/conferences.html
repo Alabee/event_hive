@@ -1,0 +1,90 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Conference & Talks</title>
+<link rel="stylesheet" type="text/css"href="{%static 'review/graphics/styles.css' %}">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+
+<body>
+
+		<section id="body" class="width">
+			<aside id="sidebar" class="column-left">
+
+			<header>
+				<h1><a href="#">EVENT HIVE</a></h1>
+				
+			</header>
+
+			<nav id="mainnav">
+				<ul>
+                   <li><a href="index.html">Home</a></li>
+                   	<li><a href="examples.html">Events</a></li>
+                   	<li class="selected-item"><a href="#">Review</a></li>
+                    <li><a href="#">Gallery</a></li> 
+                    <li><a href="#">Register</a></li>
+                </ul>
+			</nav>
+
+
+			</aside>
+			<section class="category_menu">
+
+			</section>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+
+			<section id="content_conferences"  class="column-right">
+				<div class="topnav" id="myTopnav">
+				  <a href="/review/art/">Art & Photography</a>
+				  <a href="/review/partying" class="selected-item">Partying & Clubbing</a>
+				  <a href="/review/conferences">Conferences & Talks</a>
+				  <a href="/review/tech/">E-World</a>
+				  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+				</div>
+		<article>
+			<p>				
+			{% block content %}
+				{% for i in content %}
+				<h2>{{i.event_name}}</h2>
+				<p>{{i.event_description}}</p>
+				<div class="article-info">
+					Event charges: {{i.event_charges}}
+					<time><br>
+						Event date: {{i.event_date}}
+					</time>
+				</div>
+				<a href="#" class="button">Read more</a>
+				<a href="#" class="button button-reversed">Comments</a>
+				{% endfor %}
+			{% endblock %}
+			</p>
+
+
+		</article>
+
+			
+			<footer class="clear">
+				<p>&copy;<a href="review/">EVENT HIVE</a></p>
+			</footer>
+
+		</section>
+
+		<div class="clear"></div>
+
+	</section>
+	
+
+</body>
+</html>
