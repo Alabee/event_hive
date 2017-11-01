@@ -34,5 +34,6 @@ def login(request):
 			password = request.POST.get('password')
 
 			user = authenticate
+			#Not complete
 
 	return render(request, "register/login.html")

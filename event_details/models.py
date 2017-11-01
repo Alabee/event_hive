@@ -9,7 +9,7 @@ class Event_details(models.Model):
 	event_date = models.DateField()
 
 	def __str__(self):
-		return self.event_name + '-' + self.event_description
+		return self.name
 
 '''
 , choices=EVENT_CATEGORIES
