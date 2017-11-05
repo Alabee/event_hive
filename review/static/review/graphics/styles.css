@@ -206,7 +206,7 @@ section#body {
 section#content_art {
 	margin-left: 250px;
 	padding: 20px;
-	background-image: url("images/art.jpg");
+	background-image: url("images/art2.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -239,6 +239,10 @@ section#content {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
+
+.field {
+  margin: .5rem, 0 1.5rem, 0; }
+
 .category_menu{
 	margin-left: 250px;
 	padding-top: 20px;

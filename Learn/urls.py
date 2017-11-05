@@ -17,6 +17,8 @@ from django.conf.urls import url, include
 from home import views as home
 from django.contrib import admin
 from register import views as register
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -27,3 +29,7 @@ urlpatterns = [
     url(r'^register/', include('register.urls')),
     url(r'^login/', register.login, name ='login'),
 ]
+
+if settings.DEBUG:
+    urlpatterns+= static(settings.STATIC_URL, document_root =settings.STATIC_ROOT)
+    urlpatterns+= static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)

@@ -25,14 +25,17 @@
                    	<li class="selected-item"><a href="/review/">Review</a></li>
                     <li><a href="#">Gallery</a></li> 
                     <li><a href="/register/">Register</a></li>
+				<form type="get" action=".">
+				    <input  id="search_box" type="text" name="search_box"  placeholder="Search" >
+				    <button id="search_submit" type="submit" >Submit</button>
+				</form>
                 </ul>
+
 			</nav>
 
 
 			</aside>
-			<section class="category_menu">
 
-			</section>
 <script>
 function myFunction() {
     var x = document.getElementById("myTopnav");
@@ -45,7 +48,7 @@ function myFunction() {
 </script>
 
 
-			<section id="content"  class="column-right">
+			<section id="{{category}}"  class="column-right">
 				<div class="topnav" id="myTopnav">
 				  <a href="/review/art/">Art & Photography</a>
 				  <a href="/review/partying">Partying & Clubbing</a>
@@ -56,6 +59,7 @@ function myFunction() {
 		<article>
 			<p>				
 			{% block content %}
+			<img src="{{i.event_image}}">
 				{% for i in content %}
 				<h2>{{i.event_name}}</h2>
 				<p>{{i.event_description}}</p>
